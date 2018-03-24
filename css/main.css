@@ -405,8 +405,7 @@ header nav .logo {
 .about ul li{
     list-style: none;
     text-align: left;
-    padding-left: 40px;
-    margin-bottom: 15px;
+    /*padding-left: 40px;*/
 }
 .about_form .hrs{
     width: 5%;
@@ -471,14 +470,14 @@ header nav .logo {
 }
 
 .about p {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .about ul li {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.5em;
     padding-top: 5px;
-    padding-bottom: 5px;
+    padding-bottom: 15px;
 }
 
 .about h2 a {
@@ -627,7 +626,7 @@ header nav .logo {
 }
 
 .news p {
-    color: #000;
+    color: #333;
 }
 
 .news .newsa {
@@ -733,7 +732,7 @@ footer .footer-button {
     }
 
     .about .aboutwh img {
-        height: 188px;
+        height: 230px;
     }
     .about_form{
         height:500px;
@@ -828,7 +827,7 @@ footer .footer-button {
 
 .newsye ul li a {
     display: block;
-    padding: 10px 15px;
+    padding: 10px 21px;
     color: #808080;
     font-size: 16px;
     border-bottom: #eee solid 1px;
@@ -880,7 +879,7 @@ footer .footer-button {
     }
 
     .newsye .pagination li a {
-        padding: 6px 11px;
+        /*padding: 6px 11px;*/
     }
     .gjianjie p {
         font-size: 14px;
@@ -1018,7 +1017,7 @@ footer .footer-button {
     }
 
     .newsye .pagination li a {
-        padding: 5px 11px;
+        padding: 7px 14px;
         font-size: 13px;
     }
 
@@ -1114,7 +1113,7 @@ footer .footer-button {
 .joinyemian form {
     background: #f9f9f9;
     border-radius: 3px;
-    padding: 50px;
+    /*padding: 50px;*/
     border: solid 1px #dadada;
     margin-bottom: 20px;
 }
@@ -1141,7 +1140,7 @@ footer .footer-button {
 
 .joinyemian form span {
     font-size: 15px;
-    margin-left: 30px;
+    /*margin-left: 30px;*/
 }
 
 .joinyemian form .join-jine input {
@@ -1330,95 +1329,17 @@ footer .footer-button {
     }
 }
 
-@media (max-width: 750px) {
-    .carousel-inner>.item>img, .carousel-inner>.item>a>img {
-        line-height: 1;
-        height: 203px;
-    }
-    .about .aboutwh img {
-        height: 220px;
-    }
-    .aboutwh p{
-        text-align: left;
-    }
-    .profuile .le{
-        text-align: left;
-    }
-    .profuile .cen{
-        text-align: center;
-    }
-    .join p{
-        text-align: center;
-    }
-    .news .cen{
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    h2{
-        font-size: 22px;}
-    h3{
-        font-size: 20px;
-    }
-    .products #myTabContent div a p {
-        text-align: center;
-    }
-    .produ
-    p {
-        text-align: center!important;
-    }
-
-    header ul li a {
-        text-align: center;
-    }
-
-    header p {
-        display: none;
-    }
-
-    header .navbar-toggle {
-        border: solid #000 1px;
-    }
-
-    header .navbar-toggle span {
-        border-bottom: 1px #000 solid;
-    }
-
-    header .header-top .btn-default {
-        width: 100%;
-        background: #1e69a5;
-        color: #fff;
-        cursor: pointer;
-        border-color:#1e69a5!important;
-    }
-
-    .products img {
-        display: block;
-        margin: 0 auto;
-    }
-
-    .products p {
-        width: 70%;
-        margin: auto;
-    }
-
-    .profuile h6 {
-        display: none;
-    }
-
-    .about .aboutry img {
-        width: 100%;
-        height: 111px;
-    }
-}
-@media (max-width: 991px) {
-    .joinyemian form .nameSpan {
-        display: block;
-        padding-left: 120px;
-    }
-}
 
 @media (max-width: 1024px) {
-
+    .newsye ul{
+        padding: 0;
+    }
+    .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+        height: 375px;
+    }
+    .about ul li {
+        padding-bottom: 5px;
+    }
     .banner_img>img{
         height: 350px!important;
     }
@@ -1433,7 +1354,7 @@ footer .footer-button {
 
 @media (max-width: 720px) {
     .banner_img>img {
-        height: 239px!important;
+        height: 190px!important;
     }
     .joinyemian form .nameSpan {
         display: block;
@@ -1516,6 +1437,92 @@ footer .footer-button {
         width: 100%;
         height: 283px;
         border: #ccc solid 1px;
+    }
+}
+@media (max-width: 750px) {
+    .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+        line-height: 1;
+        height: 188px;
+    }
+    .about .aboutwh img {
+        height: 220px;
+    }
+    .aboutwh p{
+        text-align: left;
+    }
+    .profuile .le{
+        text-align: left;
+    }
+    .profuile .cen{
+        text-align: center;
+    }
+    .join p{
+        text-align: center;
+    }
+    .news .cen{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    h2{
+        font-size: 22px;}
+    h3{
+        font-size: 20px;
+    }
+    .products #myTabContent div a p {
+        text-align: center;
+    }
+    .produ
+    p {
+        text-align: center!important;
+    }
+
+    header ul li a {
+        text-align: center;
+    }
+
+    header p {
+        display: none;
+    }
+
+    header .navbar-toggle {
+        border: solid #000 1px;
+    }
+
+    header .navbar-toggle span {
+        border-bottom: 1px #000 solid;
+    }
+
+    header .header-top .btn-default {
+        width: 100%;
+        background: #1e69a5;
+        color: #fff;
+        cursor: pointer;
+        border-color:#1e69a5!important;
+    }
+
+    .products img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .products p {
+        width: 70%;
+        margin: auto;
+    }
+
+    .profuile h6 {
+        display: none;
+    }
+
+    .about .aboutry img {
+        width: 100%;
+        height: 111px;
+    }
+}
+@media (max-width: 991px) {
+    .joinyemian form .nameSpan {
+        display: block;
+        padding-left: 120px;
     }
 }
 

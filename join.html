@@ -172,7 +172,8 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row" style="margin-bottom: 20px;">
+
             <a href="" name="chanqin"></a>
             <h3><i>5</i> 产品展示</h3>
             <div class="col-md-6">
@@ -221,11 +222,45 @@
                 </form>
             </div>
         </div>
-
     </div>
+
+    <a href="" name="jiaru"></a>
+    <h3><i>6</i>加入我们 </h3>
+        <div class="about_form">
+            <div class="container">
+                <form action="">
+                    <h2 style="font-size:20px;">我要加盟</h2>
+                    <div class="hrs"></div>
+                    <ul>
+                        <li class="row">
+                            <div class="col-md-6 uname">
+                                <span>您的姓名 : <b></b> </span>
+                                <input type="text">
+                            </div>
+                            <div class="col-md-6 phone">
+                                <span>您的手机号 : <b></b> </span>
+                                <input type="text">
+                            </div>
+                        </li>
+                        <li class="uemil">
+                            <span>您的邮箱 : <b></b> </span>
+                            <input type="text">
+                        </li>
+                        <li>
+                            <span>您的条件 :</span>
+                            <textarea  style="resize:none" rows="7" cols="30"></textarea>
+                        </li>
+                        <li>
+                            <p><input class="about_form_submit" type="submit"></p>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+
 </div>
 
-<footer>
+<footer style="margin-top: 0;">
     <!--footer-->
     <div class="footer-top link">
         <!--友情链接-->
@@ -282,6 +317,93 @@
 <script src="plug/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
 <!--自己写的js-->
 <script src="js/main.min.js"></script>
+<script>
+    //   <!--验证用户名-->
+    var uname=document.querySelector('.uname>input');
+    var namePtxt=document.querySelector('.uname>span>b');
+    uname.onfocus=function(){//获取焦点时
+        namePtxt.innerHTML="请输入您的姓名";
+        namePtxt.style.color='red';
+    };
+    //失去焦点 函数
+    function unameBlur(){
+        var reg=/^[\u4e00-\u9fa5]{2,18}$/;//\u4e00-\u9fa5 （汉字）  _(拼接)
+        if(reg.test(uname.value)){
+            namePtxt.innerHTML="对了";
+            namePtxt.style.color='#6cbe1f';
+            uname.style.border='solid 1px #6cbe1f';
+            return  true;//验证通过返回 一个true  给最后点击提交时做准备  最后都返回true（通过）才通过
+        }else{
+            namePtxt.innerHTML="格式错误";
+            namePtxt.style.color='red';
+            return false;//验证不通过返回 一个false  给最后点击提交时做准备
+        }
+    }
+    uname.onblur=function(){//失去焦点时执行函数 键盘松开
+        unameBlur()
+    };
+    //    验证邮箱
+    var uemil=document.querySelector('.uemil>input');
+    var uemilPtxt=document.querySelector('.uemil>span>b');
+    uemil.onfocus=function (){//获取焦点时
+        uemilPtxt.innerHTML='请输入电子邮箱';
+        uemilPtxt.style.color='red';
+    };
+    //    失去焦点 函数
+    function uemilBlur(){
+        var reg=/^[0-9a-zA-Z]+@[0-9a-zA-Z]{2,4}\.(com||cn)$/;
+        if(reg.test(uemil.value)){
+            uemilPtxt.innerHTML="可以";
+            uemilPtxt.style.color='#6cbe1f';
+            uemil.style.border='solid 1px #6cbe1f';
+            return  true;//验证通过返回 一个true  给最后点击提交时做准备  最后都返回true（通过）才通过
+        }else {
+            uemilPtxt.innerHTML="请输入正确的电子邮箱格式";
+            uemilPtxt.style.color='red';
+            return false;//验证不通过返回 一个false  给最后点击提交时做准备
+        }
+    }
+    uemil.onblur=function(){//失去焦点 时
+        uemilBlur();//调用
+    };
 
+    //验证手机号
+    var phone=document.querySelector('.phone>input');
+    var phonePtxt=document.querySelector('.phone>span>b');
+    phone.onfocus=function(){
+        phonePtxt.innerHTML='请输入手机号码';
+        phonePtxt.style.color='red';
+    };
+    function phoneBlur(){
+        var reg=/^1[3578][0-9]{9}$/;
+        if (reg.test(phone.value)){
+            phonePtxt.innerHTML="可以";
+            phonePtxt.style.color='#6cbe1f';
+            phone.style.border='solid 1px #6cbe1f';
+            return  true;//验证通过返回 一个true  给最后点击提交时做准备  最后都返回true（通过）才通过
+        }else{
+            phonePtxt.innerHTML="请输入正确的手机号码";
+            phonePtxt.style.color='red';
+            return false;//验证不通过返回 一个false  给最后点击提交时做准备
+        }
+    }
+    phone.onblur=function(){
+        phoneBlur();
+    };
+
+    var submit=document.querySelector('.about_form_submit');
+
+    submit.onclick=function(){
+        if(!unameBlur()||!phoneBlur()||!uemilBlur()){
+            alert('请确认信息是否完好');
+            return false;
+        }else{
+            alert('提交成功');
+            location.href='index.html';
+        }
+    };
+
+
+</script>
 </body>
 </html>
